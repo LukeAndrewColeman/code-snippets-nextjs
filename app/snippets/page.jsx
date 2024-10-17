@@ -1,7 +1,7 @@
 'use client'
 import React, {useEffect, useState} from 'react';
-import SnippetCard from "../_components/SnippetCard.jsx";
-import SearchBar from '../_components/SearchBar.jsx';
+import SnippetCard from "@/app/_components/SnippetCard";
+import SearchBar from "@/app/_components/SearchBar";
 import { useAuth } from '@clerk/nextjs'
 import { useRouter } from 'next/navigation';
 
