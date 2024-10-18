@@ -1,5 +1,5 @@
 'use client'
-import { SignedOut } from "@clerk/nextjs";
+import { SignedOut, SignedIn } from "@clerk/nextjs";
 import Link from "next/link";
 
 const Home = () => {
@@ -14,6 +14,9 @@ const Home = () => {
                         <Link className="m-2 mr-4 bg-[#448168] hover:bg-[#5AA99E] text-[#304152] px-6 py-2 rounded-full font-bold" href='/sign-up'>Start Saving Snippets Today</Link>
                         <Link className="m-2 bg-[#448168] hover:bg-[#5AA99E] text-[#304152] px-6 py-2 rounded-full font-bold" href='/sign-in'>Access My Snippets</Link>
                     </SignedOut>
+                    <SignedIn>
+                        <Link className="m-2 bg-[#448168] hover:bg-[#5AA99E] text-[#304152] px-6 py-2 rounded-full font-bold" href='/snippets'>View Your Snippets</Link>
+                    </SignedIn>
                 </div>
             </div>
         </div>
