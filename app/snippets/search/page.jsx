@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
-import SnippetCard from "@/app/_components/SnippetCard";
+import SnippetCard from "@/app/components/SnippetCard";
 
 const ResultsPage = () => {
     const [snippets, setSnippets] = useState([]);

@@ -1,5 +1,5 @@
 import "./globals.css";
-import Navbar from "@/app/_components/Navbar";
+import Navbar from "@/app/components/Navbar";
 import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata = {

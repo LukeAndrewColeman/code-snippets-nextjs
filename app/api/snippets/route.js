@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { prisma } from '../../../lib/db';
+import { prisma } from '@/lib/db';
 import { auth } from '@clerk/nextjs/server';
 
 export const dynamic = 'force-dynamic';
@@ -52,23 +52,23 @@ export async function POST(request) {
 
     // Check for user
     if (!userId) {
-        return { error: 'User not found' };
+      return new Response(JSON.stringify({ error: 'Unauthorized' }), { status: 401 });
     }
 
     // Create the snippet in the database
     const snippet = await prisma.snippet.create({
       data: {
-        title: title,
-        description: description,
-        language: language,
-        codeSnippet: codeSnippet,
-        userId: userId
+        title,
+        description,
+        language,
+        codeSnippet,
+        userId
       },
     });
 
-    return NextResponse.json({ success: true, snippet });
+    return new Response(JSON.stringify({ success: true, snippet }), { status: 201 });
   } catch (error) {
     console.error('Error creating snippet:', error);
-    return NextResponse.json({ success: false, error: 'An error occurred while creating the snippet' }, { status: 500 });
+    return new Response(JSON.stringify({ success: false, error: 'An error occurred while creating the snippet' }), { status: 500 });
   }
 }

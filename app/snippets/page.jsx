@@ -1,7 +1,7 @@
 'use client'
 import React, {useEffect, useState} from 'react';
-import SnippetCard from "@/app/_components/SnippetCard";
-import SearchBar from "@/app/_components/SearchBar";
+import SnippetCard from '@/app/components/SnippetCard'
+import SearchBar from '@/app/components/SearchBar'
 import { useAuth } from '@clerk/nextjs'
 import { useRouter } from 'next/navigation';
 
@@ -96,5 +96,6 @@ const DashboardPage = () => {
 };
 
 export default DashboardPage;
+
 
 
