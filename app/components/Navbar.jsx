@@ -7,7 +7,7 @@ const Navbar = async () => {
     const user = await checkUser();
 
     return (
-        <div className="navbar h-[10vh] bg-[#283A4C] flex justify-between items-center">
+        <div className="navbar px-4 h-20 bg-[#283A4C] flex justify-between items-center">
             <div className="container mx-auto flex justify-between items-center">
             <Link href='/snippets'>
                 <div className="flex justify-center items-center">
