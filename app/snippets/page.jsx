@@ -72,7 +72,7 @@ const DashboardPage = () => {
             <SearchBar onSearch={handleSearch} />
             <div className="mt-10 container mx-auto">
                 <p className='font-bold'>Filter by: </p>
-                {languages.map(language => (
+                {['All', ...languages.filter(language => language !== 'All').sort()].map(language => (
                     <button 
                         key={language}
                         onClick={() => setFilter(language)} 
