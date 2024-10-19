@@ -68,7 +68,7 @@ const DashboardPage = () => {
         );
 
     return (
-        <div>
+        <div className='p-4'>
             <SearchBar onSearch={handleSearch} />
             <div className="mt-10 container mx-auto">
                 <p className='font-bold'>Filter by: </p>
