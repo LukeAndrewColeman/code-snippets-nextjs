@@ -32,28 +32,28 @@ export default function CreatePage() {
         <div className="container mx-auto mt-6">
             <h1 className="text-center text-3xl text-[#6DC0B4] font-bold py-4">Create a New Code Snippet</h1>
             <form onSubmit={handleSubmit} className="flex flex-col items-center mt-6 bg-[#28394B] p-10 rounded-xl">
-                <div className="flex flex-col w-[60%]">
+                <div className="flex flex-col w-full lg:w-[70%]">
                     <label htmlFor="title" className="mb-2 font-bold text-lg text-center text-[#6DC0B4]">Title</label>
                     <input type="text" id="title" name="title"
                            className="text-[#1E1E1E] rounded-lg block w-full p-2.5"
                            required
                     />
                 </div>
-                <div className="flex flex-col w-[60%] mt-6">
+                <div className="flex flex-col w-full lg:w-[70%] mt-6">
                     <label htmlFor="description" className="mb-2 font-bold text-lg text-center text-[#6DC0B4]">Description</label>
                     <input type="text" id="description" name="description"
                            className="text-[#1E1E1E] rounded-lg block w-full p-2.5"
                            required
                     />
                 </div>
-                <div className="flex flex-col w-[60%] mt-6">
+                <div className="flex flex-col w-full lg:w-[70%] mt-6">
                     <label htmlFor="language" className="mb-2 font-bold text-lg text-center text-[#6DC0B4]">Language</label>
                     <input type="text" name="language" id="language" 
                            className="text-[#1E1E1E] rounded-lg block w-full p-2.5"
                            required
                     />
                 </div>
-                <div className="flex flex-col w-[60%] mt-6">
+                <div className="flex flex-col w-full lg:w-[70%] mt-6">
                     <label htmlFor="codeSnippet" className="mb-4 font-bold text-lg text-center text-[#6DC0B4]">Code Snippet</label>
                     <textarea id="codeSnippet" name="codeSnippet" rows="15" cols="33"
                               className="text-[#1E1E1E] rounded-lg block w-full p-2.5"
