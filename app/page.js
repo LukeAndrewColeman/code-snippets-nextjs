@@ -1,5 +1,4 @@
 "use client";
-import { SignedOut, SignedIn } from "@clerk/nextjs";
 import Link from "next/link";
 
 const Home = () => {
@@ -21,28 +20,7 @@ const Home = () => {
                     is neatly organized and available at your fingertips.
                 </p>
                 <div className="flex flex-col sm:flex-row mt-4">
-                    <SignedOut>
-                        <Link
-                            className="text-center m-2 mr-4 bg-[#448168] hover:bg-[#5AA99E] text-[#304152] px-6 py-2 rounded-full font-bold"
-                            href="/sign-up"
-                        >
-                            Start Saving Snippets Today
-                        </Link>
-                        <Link
-                            className="text-center m-2 border-2 border-[#448168] hover:bg-[#5AA99E] text-[#448168] hover:text-[#304152] hover:border-[#5AA99E] px-6 py-2 rounded-full font-bold"
-                            href="/sign-in"
-                        >
-                            Access My Snippets
-                        </Link>
-                    </SignedOut>
-                    <SignedIn>
-                        <Link
-                            className="text-center m-2 bg-[#448168] hover:bg-[#5AA99E] text-[#304152] px-6 py-2 rounded-full font-bold"
-                            href="/snippets"
-                        >
-                            View Your Snippets
-                        </Link>
-                    </SignedIn>
+                    {/* TODO: add login/logout button */}
                 </div>
             </div>
         </div>

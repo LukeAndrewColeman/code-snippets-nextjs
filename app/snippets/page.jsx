@@ -2,14 +2,13 @@
 import React, { useEffect, useState } from "react";
 import SnippetCard from "@/app/components/SnippetCard";
 import SearchBar from "@/app/components/SearchBar";
-import { useAuth } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 
 const DashboardPage = () => {
     const [fetchError, setFetchError] = useState(null);
     const [snippets, setSnippets] = useState([]);
     const [languages, setLanguages] = useState(["All"]);
-    const { userId } = useAuth();
+    {/* TODO: grab user id  */}
     const [filter, setFilter] = useState("All");
     const [searchTerm, setSearchTerm] = useState("");
     const router = useRouter();
@@ -139,11 +138,11 @@ const DashboardPage = () => {
                     Sorry no snippets found, please add some snippets
                 </h3>
             )}
-            {!userId && (
+            {/* {!userId && (
                 <h3 className="text-2xl font-bold text-center mt-8">
                     Please login to see code snippets
                 </h3>
-            )}
+            )} */}
         </div>
     );
 };
