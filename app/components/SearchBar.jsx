@@ -1,8 +1,8 @@
-"use client"
-import React, {useState} from 'react';
+"use client";
+import React, { useState } from "react";
 
 const SearchBar = ({ onSearch }) => {
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState("");
 
     const handleSearch = (e) => {
         e.preventDefault();
