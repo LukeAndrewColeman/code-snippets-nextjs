@@ -6,12 +6,12 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background-color: #304253;
-    color: #fffcff;
+    background-color: #cbcfd8;
+    color: #34373d;
 }
 
 .home button {
-    @apply m-2 bg-[#448168] text-white px-6 py-2 rounded-full;
+    @apply m-2 bg-[#448168] text-white px-6 py-2 rounded-lg;
 }
 
 .cl-userButtonTrigger {
