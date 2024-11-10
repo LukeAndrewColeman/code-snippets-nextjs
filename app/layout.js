@@ -4,7 +4,7 @@ import { SessionProvider } from "next-auth/react";
 
 export const metadata = {
     title: "Code Snippets | Luke Andrew Coleman",
-    description: "An app to store your code snippets",
+    description: "An app to store your code most used snippets",
 };
 
 export default function RootLayout({ children }) {
