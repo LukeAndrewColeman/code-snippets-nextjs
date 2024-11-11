@@ -19,6 +19,31 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             }
             return session;
         },
+        // Add signIn callback to handle the error
+        signIn: async ({ user, account, profile }) => {
+            // Check if user email exists in database
+            const existingUser = await prisma.user.findUnique({
+                where: { email: user.email },
+                include: { accounts: true },
+            });
+
+            if (existingUser && existingUser.accounts.length === 0) {
+                // If user exists but has no linked accounts, allow sign in
+                return true;
+            }
+
+            if (existingUser && existingUser.accounts.length > 0) {
+                // If user exists and has linked accounts, check if it's the same provider
+                const existingAccount = existingUser.accounts.find((acc) => acc.provider === account.provider);
+
+                if (!existingAccount) {
+                    // If no matching provider found, prevent sign in
+                    return false;
+                }
+            }
+
+            return true;
+        },
     },
     trustHost: true,
 });
