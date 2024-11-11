@@ -13,8 +13,10 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <SessionProvider>
                 <body>
-                    <Navbar />
-                    {children}
+                    <main className="min-h-screen">
+                        <Navbar />
+                        {children}
+                    </main>
                     <Footer />
                 </body>
             </SessionProvider>
