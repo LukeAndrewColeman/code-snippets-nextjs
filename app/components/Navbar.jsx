@@ -13,7 +13,7 @@ const Navbar = async () => {
             <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
                 <Link href="/snippets">
                     <div className="flex justify-center items-center">
-                        <h2 className="text-2xl font-bold ">CODE SNIPPETS</h2>
+                        <h2 className="text-2xl font-bold ">Code Snippets</h2>
                     </div>
                 </Link>
                 <div className="flex justify-center items-center">

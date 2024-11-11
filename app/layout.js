@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
 import { SessionProvider } from "next-auth/react";
 
 export const metadata = {
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
                 <body>
                     <Navbar />
                     {children}
+                    <Footer />
                 </body>
             </SessionProvider>
         </html>

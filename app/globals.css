@@ -8,6 +8,7 @@ body {
     font-family: "Poppins", sans-serif;
     background-color: #cbcfd8;
     color: #34373d;
+    min-height: 100vh;
 }
 
 .home button {
