@@ -5,8 +5,6 @@ import { auth } from "@/auth";
 const Home = async () => {
     const session = await auth();
 
-    console.log(process.env.AUTH_GOOGLE_ID);
-
     return (
         <div className="home min-h-[91vh] container pt-20 md:pt-32 mx-auto">
             <div className="px-4 flex flex-col items-center">
