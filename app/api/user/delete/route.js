@@ -10,18 +10,35 @@ export async function DELETE() {
             return NextResponse.json({ error: "Not authenticated" }, { status: 401 });
         }
 
-        // Delete all user's snippets first (assuming you have a snippets table)
-        await prisma.snippet.deleteMany({
-            where: {
-                userId: session.user.id,
-            },
-        });
+        // Use a transaction to ensure all operations complete or none do
+        await prisma.$transaction(async (tx) => {
+            // 1. Delete all sessions first
+            await tx.session.deleteMany({
+                where: {
+                    userId: session.user.id,
+                },
+            });
 
-        // Delete the user
-        await prisma.user.delete({
-            where: {
-                id: session.user.id,
-            },
+            // 2. Delete all accounts
+            await tx.account.deleteMany({
+                where: {
+                    userId: session.user.id,
+                },
+            });
+
+            // 3. Delete all snippets
+            await tx.snippet.deleteMany({
+                where: {
+                    userId: session.user.id,
+                },
+            });
+
+            // 4. Finally delete the user
+            await tx.user.delete({
+                where: {
+                    id: session.user.id,
+                },
+            });
         });
 
         return NextResponse.json({ message: "Account deleted successfully" });
