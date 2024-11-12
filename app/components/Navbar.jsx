@@ -20,7 +20,7 @@ const Navbar = async () => {
                     {session ? (
                         <div className="flex items-center mt-3 sm:mt-0 gap-6">
                             <Link href="/snippets/create">
-                                <button className="text-white bg-[#448168] hover:bg-[#5AA99E] px-3 py-1 rounded-lg font-semibold">Create Snippet</button>
+                                <button className="text-white bg-[#448168] hover:bg-[#5AA99E] px-4 py-2 rounded-lg font-semibold">Create Snippet</button>
                             </Link>
                             <SignoutButton />
                             <UserAvatar session={session} />

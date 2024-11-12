@@ -80,25 +80,25 @@ const UpdatePage = () => {
                     <label htmlFor="title" className="mb-2 font-bold text-lg text-center">
                         Title
                     </label>
-                    <input type="text" id="title" name="title" className="text-[#1E1E1E] rounded-lg block w-full p-2.5" required />
+                    <input type="text" id="title" name="title" className="text-[#1E1E1E] rounded-lg block w-full p-2.5 bg-[#E9ECEF]" required />
                 </div>
                 <div className="flex flex-col w-full lg:w-[70%] mt-6">
                     <label htmlFor="description" className="mb-2 font-bold text-lg text-center">
                         Description
                     </label>
-                    <input type="text" id="description" name="description" className="text-[#1E1E1E] rounded-lg block w-full p-2.5" required />
+                    <input type="text" id="description" name="description" className="text-[#1E1E1E] rounded-lg block w-full p-2.5 bg-[#E9ECEF]" required />
                 </div>
                 <div className="flex flex-col w-full lg:w-[70%] mt-6">
                     <label htmlFor="language" className="mb-2 font-bold text-lg text-center">
                         Language
                     </label>
-                    <input type="text" name="language" id="language" className="text-[#1E1E1E] rounded-lg block w-full p-2.5" required />
+                    <input type="text" name="language" id="language" className="text-[#1E1E1E] rounded-lg block w-full p-2.5 bg-[#E9ECEF]" required />
                 </div>
                 <div className="flex flex-col w-full lg:w-[70%] mt-6">
                     <label htmlFor="codeSnippet" className="mb-4 font-bold text-lg text-center">
                         Code Snippet
                     </label>
-                    <textarea id="codeSnippet" name="codeSnippet" rows="15" cols="33" className="text-[#1E1E1E] rounded-lg block w-full p-2.5" required />
+                    <textarea id="codeSnippet" name="codeSnippet" rows="15" cols="33" className="text-[#1E1E1E] rounded-lg block w-full p-2.5 bg-[#E9ECEF] resize-none" required />
                 </div>
                 <button type="submit" className="tex-center mt-6 bg-[#448168] hover:bg-[#5AA99E] text-white font-semibold px-6 py-2 rounded-lg">
                     Update Code Snippet

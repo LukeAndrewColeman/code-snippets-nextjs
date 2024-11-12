@@ -15,7 +15,7 @@ const SnippetGrid = ({ snippets, fetchError, visibleSnippets, onLoadMore }) => {
                     </button>
                 </div>
             )}
-            {snippets.length === 0 && <h3 className="text-2xl font-bold text-center mt-8">Sorry no snippets found, please add some snippets</h3>}
+            {snippets.length === 0 && <h3 className="text-2xl font-bold text-center mt-8">Sorry no snippets found, please add some snippets to get started</h3>}
         </>
     );
 };

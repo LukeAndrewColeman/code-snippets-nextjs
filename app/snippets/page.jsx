@@ -39,7 +39,7 @@ const DashboardPage = () => {
     });
 
     return (
-        <div className="p-8">
+        <div className="p-8 container mx-auto">
             <SearchBar onSearch={handleSearch} />
             <FilterButtons languages={languages} filter={filter} onFilterChange={handleFilterChange} />
             <SnippetGrid snippets={filteredSnippets} fetchError={fetchError} visibleSnippets={visibleSnippets} onLoadMore={handleLoadMore} />
