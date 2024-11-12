@@ -11,7 +11,7 @@ const DashboardPage = () => {
     const { snippets, languages, fetchError } = useSnippets();
     const [searchTerm, setSearchTerm] = useState("");
     const [filter, setFilter] = useState("All");
-    const [visibleSnippets, setVisibleSnippets] = useState(8);
+    const [visibleSnippets, setVisibleSnippets] = useState(12);
 
     if (!session) {
         return <div className="container pt-20 md:pt-32 mx-auto text-center text-2xl font-bold">You must be signed in to view this page</div>;
